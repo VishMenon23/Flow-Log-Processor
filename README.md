@@ -46,7 +46,25 @@ flow_log_processor/
 - The script will output tag_count.csv and port_protocol_count.csv files in the same directory.
 
 ### Running the Flask Web Application
+- Install Flask
+  ```
+  pip install flask
+  ```
+- Start the Flask Server:
+  ```
+  python app.py
+  ```
+- Access the Web Interface:
+  - Open a web browser and navigate to http://127.0.0.1:5000/.
+  - Use the interface to upload your lookup_table.csv and flow_logs.txt files.
+  - The results will be displayed in a tabulated form on the results page.
+  
 
 ### Tests and Validation
+
+- File Type Validation: The Flask app includes checks to ensure that only .csv files are uploaded for the lookup table and .txt files for the flow logs. If incorrect file types are uploaded, they are rejected with an appropriate error message.
+- Performance Test: Created large flow_logs.txt file and a lookup_table.csv with many entries.
+
+  
   
   
