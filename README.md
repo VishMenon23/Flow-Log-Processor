@@ -8,6 +8,7 @@ Public URL - https://trialwebsite.pythonanywhere.com/
 ## Assumptions
 - **Log Format and Log Version**: The program supports the default log format (version 2) as described in the problem statement. The fields in the log file are space-separated, with destination port and protocol fields in the expected positions (7th and 8th, respectively).
 - **File Types For the Flask App**: The lookup table must be a CSV file, and the flow logs must be in a TXT file format. The program includes validation to ensure that only these file types are processed.
+- Port/Protocol count is updated for all combinations of Destination Port/Protocol. This includes combinations that are not a part of some specific tag.
 
 ## Directory Structure
 ```
