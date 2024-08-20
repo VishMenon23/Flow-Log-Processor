@@ -12,12 +12,12 @@ This project contains two components for processing network flow log data based 
 ```
 flow_log_processor/
 │
-├── app.py                # Flask application providing a web interface
-├── Flow_Log_Processor.py            # Standalone Python script for processing logs
+├── app.py                
+├── Flow_Log_Processor.py            
 ├── templates/
-│   ├── index.html        # HTML template for file upload form
-│   └── results.html      # HTML template for displaying results
-└── uploads/              # Directory for storing uploaded files
+│   ├── index.html        
+│   └── results.html      
+└── uploads/              
 
 ```
 - `app.py`: Flask application providing a web interface
