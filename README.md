@@ -26,10 +26,8 @@ FLOW-LOG-PROCESSOR/
 │   └── app.py
 │
 ├── Test_Files/
-│   ├── flow_logs_BIG.txt
-│   ├── flow_logs_SMALL.txt
-│   ├── lookup_table_BIG.csv
-│   ├── lookup_table_SMALL.csv
+│   ├── flow_logs.txt
+│   ├── lookup_table.csv
 │
 ├── Flow_Log_Processor.py
 ├── protocol_lookup.py
