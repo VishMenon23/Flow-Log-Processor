@@ -1,29 +1,45 @@
 # Flow-Log-Processor
  
 This project contains two components for processing network flow log data based on a lookup table:
-- **Standalone Python Script**: A simple script that processes the flow log data, maps each log entry to a tag using a lookup table, and generates summary reports.
-- **Flask Web Application**: A web interface that allows users to upload a lookup table and flow log file, processes the data, and displays the results in a tabulated form.
+- **Standalone Python Script**:
+  - A simple script that processes the flow log data, maps each log entry to a tag using a lookup table, and generates summary reports.
+  - File name - Flow_Log_Processor.py
+- **Flask Web Application**:
+  - A web interface that allows users to upload a lookup table and flow log file, processes the data, and displays the results in a tabulated form.
+  - Public URL - https://trialwebsite.pythonanywhere.com/
 
 ## Assumptions
 - **Log Format and Log Version**: The program supports the default log format (version 2) as described in the problem statement. The fields in the log file are space-separated, with destination port and protocol fields in the expected positions (7th and 8th, respectively).
 - **File Types For the Flask App**: The lookup table must be a CSV file, and the flow logs must be in a TXT file format. The program includes validation to ensure that only these file types are processed.
+- Port/Protocol count is updated for all combinations of Destination Port/Protocol. This includes combinations that are not a part of some specific tag.
+- The standalone Flow_Log_Processor.py script expects the log file to be called 'flow_logs.txt' and the lookup table to be called 'lookup_table.txt'. Both these files must be placed in the Test_Files folder.
 
 ## Directory Structure
 ```
-flow_log_processor/
+FLOW-LOG-PROCESSOR/
 │
-├── app.py                
-├── Flow_Log_Processor.py            
-├── templates/
-│   ├── index.html        
-│   └── results.html      
-└── uploads/              
-
+├── Flask_App/
+│   ├── templates/
+│   │   ├── home.html
+│   │   ├── results.html
+│   ├── uploads/
+│   └── app.py
+│
+├── Test_Files/
+│   ├── flow_logs.txt
+│   ├── lookup_table.txt
+│
+├── Flow_Log_Processor.py
+├── protocol_lookup.py
+└── protocols_code_master.csv   
 ```
-- `app.py`: Flask application providing a web interface
 - `Flow_Log_Processor.py/`: Standalone Python script for processing logs
-- `templates /`: HTML template for the web interface
-- `uploads /`: The directory for storing files uploaded using the web interface.
+- `protocols_code_master.csv /`: CSV defining the protocol code and the associated protocol
+- `protocol_lookup.py/`: Standalone Python script for creating the dictionary mapping the protocol code with the    protocol (6-TCP, 17-UDP)
+- `Flask_App/app.py`: Flask application providing a web interface
+- `Flask_App/templates /`: HTML template for the web interface
+- `Flask_App/uploads /`: The directory for storing files uploaded using the web interface.
+- `Test_Files/`: Consists of the lookup table and flow logs used for testing.
 
 ## Requirements
 - **Python 3.6**
@@ -38,7 +54,7 @@ flow_log_processor/
   cd flow_log_processor
   ```
 - Run the Script:
-   Ensure your lookup_table.csv and flow_logs.txt files are in the same directory as Flow_Log_Processor.py.
+   Ensure your lookup_table.csv and flow_logs.txt files are in the Test_Files directory.
    Run the script using Python:
    ```
    python Flow_Log_Processor.py
@@ -62,9 +78,6 @@ flow_log_processor/
 
 ### Tests and Validation
 
-- File Type Validation: The Flask app includes checks to ensure that only .csv files are uploaded for the lookup table and .txt files for the flow logs. If incorrect file types are uploaded, they are rejected with an appropriate error message.
+- File Type Validation: The Flask app includes checks to ensure that only .csv/txt files are uploaded for the lookup table and .txt files for the flow logs. If incorrect file types are uploaded, they are rejected with an appropriate error message.
 - Performance Test: Created large flow_logs.txt file and a lookup_table.csv with many entries.
-
-  
-  
-  
+- Made sure the entries in the flow_log are valid. If not, they are ignored.
