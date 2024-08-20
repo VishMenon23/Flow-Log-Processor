@@ -5,8 +5,9 @@ import os
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'Flask_App/uploads/'
-app.secret_key = 'supersecretkey'  # Required for flash messages
+app.secret_key = 'supersecretkey'  
 
+# protocol_lookup generated using protocol_lookup.py
 protocol_lookup = {"0": "hopopt", "1": "icmp", "2": "igmp", "3": "ggp", "4": "ipv4", "5": "st", "6": "tcp", "7": "cbt", "8": "egp",
                    "9": "igp", "10": "bbn-rcc-mon", "11": "nvp-ii", "12": "pup", "13": "argus", "14": "emcon", "15": "xnet", 
                    "16": "chaos", "17": "udp", "18": "mux", "19": "dcn-meas", "20": "hmp", "21": "prm", "22": "xns-idp", "23": "trunk-1", 
