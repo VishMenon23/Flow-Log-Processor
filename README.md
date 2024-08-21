@@ -43,7 +43,7 @@ FLOW-LOG-PROCESSOR/
 - `Test_Files/`: Consists of the lookup table and flow logs used for testing.
 
 ## Requirements
-- **Python 3.6**
+- **Python 3.9**
 - **Flask**: Only required if running the web interface
 
 ## Setup Instructions
