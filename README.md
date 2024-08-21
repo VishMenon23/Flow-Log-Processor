@@ -51,7 +51,7 @@ FLOW-LOG-PROCESSOR/
 - Clone the Repository:
   ```
   git clone <repository_url>
-  cd flow_log_processor
+  cd Flow-Log-Processor
   ```
 - Run the Script:
    Ensure your lookup_table.csv and flow_logs.txt files are in the Test_Files directory.
