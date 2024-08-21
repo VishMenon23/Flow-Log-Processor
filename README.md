@@ -27,7 +27,7 @@ FLOW-LOG-PROCESSOR/
 │
 ├── Test_Files/
 │   ├── flow_logs.txt
-│   ├── lookup_table.txt
+│   └── lookup_table.txt
 │
 ├── Flow_Log_Processor.py
 ├── protocol_lookup.py
