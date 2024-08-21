@@ -69,6 +69,7 @@ FLOW-LOG-PROCESSOR/
   ```
 - Start the Flask Server:
   ```
+  cd Flask_App
   python app.py
   ```
 - Access the Web Interface:
