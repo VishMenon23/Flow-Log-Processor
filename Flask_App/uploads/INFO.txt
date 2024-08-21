@@ -1,0 +1,1 @@
+Whatever Files are uploaded using the web interface is stored in this folder
