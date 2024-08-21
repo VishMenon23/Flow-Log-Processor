@@ -78,7 +78,7 @@ def generate_output_files(tag_count, port_protocol_count):
 
 # Main function to run the program
 def main():
-    lookup_file = 'Test_Files/lookup_table.csv'
+    lookup_file = 'Test_Files/lookup_table.txt'
     flow_log_file = 'Test_Files/flow_logs.txt'   
     
     lookup_dict = load_lookup_table(lookup_file)

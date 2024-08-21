@@ -4,7 +4,7 @@ from collections import defaultdict
 import os
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = 'Flask_App/uploads/'
+app.config['UPLOAD_FOLDER'] = 'uploads/'
 app.secret_key = 'supersecretkey'  
 
 # protocol_lookup generated using protocol_lookup.py
