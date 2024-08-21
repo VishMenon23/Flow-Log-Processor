@@ -4,6 +4,7 @@ This project contains two components for processing network flow log data based 
 - **Standalone Python Script**:
   - A simple script that processes the flow log data, maps each log entry to a tag using a lookup table, and generates summary reports.
   - File name - Flow_Log_Processor.py
+  - Generated output files - tag_count.csv and port_protocol_count.csv
 - **Flask Web Application**:
   - A web interface that allows users to upload a lookup table and flow log file, processes the data, and displays the results in a tabulated form.
   - Public URL - https://trialwebsite.pythonanywhere.com/
